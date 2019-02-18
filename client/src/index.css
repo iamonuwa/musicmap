@@ -12,3 +12,37 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+table thead {
+  background-color: #f9f9f9
+}
+
+table thead th {
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+table tbody td {
+  font-size: .7rem;
+  font-weight: 500;
+}
+
+table tbody td i {
+  cursor: pointer;
+}
+
+.no-genre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+}
+
+.player {
+  background-color: #edecef;
+  border-top-color: #d6d5d7;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

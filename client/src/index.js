@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import 'typeface-roboto';
 import jwt from 'jsonwebtoken';
@@ -10,14 +11,14 @@ import {MuiThemeProvider, createMuiTheme} from '@material-ui/core';
 import { setCurrentUser } from './actions/authActions';
 
 
-const customTheme = createMuiTheme({
-    palette: {
-        type: 'light'
-    },
-    typography: {
-        useNextVariants: true,
-    }
-})
+// const customTheme = createMuiTheme({
+//     palette: {
+//         type: 'light'
+//     },
+//     typography: {
+//         useNextVariants: true,
+//     }
+// })
 
 if (localStorage.jwtToken) {
     const payload = jwt.decode(localStorage.jwtToken);
@@ -28,9 +29,9 @@ if (localStorage.jwtToken) {
 }
 
 const MusicMapApp = () => (
-    <MuiThemeProvider theme={customTheme}>
-        <App />
-    </MuiThemeProvider>
+    // <MuiThemeProvider theme={customTheme}>
+    <App />
+    // </MuiThemeProvider>
 )
 ReactDOM.render(<MusicMapApp />, document.getElementById('root'));
 

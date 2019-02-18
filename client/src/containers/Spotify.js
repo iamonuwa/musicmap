@@ -157,6 +157,7 @@ class Spotify extends Component {
             }
             //check if user has authenticated with Spotify
             if(window.location.href.includes('#access_token')){
+                console.log('Has token')
                 spotifyApi.storeTokenAndExpiry();    
             }
             //connect to spotify web playback sdk
